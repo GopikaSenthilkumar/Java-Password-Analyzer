@@ -1,0 +1,200 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #222;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    line-height: 1.4;
+}
+
+.container {
+    background-color: #333;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+    padding: 25px;
+    width: 100%;
+    max-width: 500px;
+    position: relative;
+    border: 1px solid rgba(0, 255, 255, 0.2);
+}
+
+h1 {
+    color: #0ff;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 24px;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+}
+
+h3 {
+    margin-top: 15px;
+    margin-bottom: 8px;
+    color: #0ff;
+    font-size: 16px;
+}
+
+.password-container {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+input[type="password"],
+input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid rgba(0, 255, 255, 0.3);
+    background-color: #444;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input[type="password"]:focus,
+input[type="text"]:focus {
+    border-color: #0ff;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+}
+
+#togglePassword {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: #0ff;
+    cursor: pointer;
+    font-size: 18px;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+}
+
+#togglePassword:hover {
+    opacity: 1;
+}
+
+.strength-meter {
+    height: 8px;
+    background-color: #444;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    overflow: hidden;
+    border: 1px solid rgba(0, 255, 255, 0.2);
+}
+
+.bar {
+    height: 100%;
+    width: 0;
+    transition: width 0.5s, background-color 0.5s;
+}
+
+.requirements-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.requirements p {
+    margin: 6px 0;
+    transition: color 0.3s;
+    color: #aaa;
+    font-size: 14px;
+}
+
+.requirements p i {
+    margin-right: 5px;
+    color: #f44;
+}
+
+.requirements p.met i {
+    color: #0ff;
+}
+
+.requirements p.met {
+    color: #0ff;
+}
+
+.tips-container {
+    margin-top: 20px;
+    background-color: #444;
+    padding: 15px;
+    border-radius: 5px;
+    border-left: 4px solid #0ff;
+    font-size: 14px;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
+}
+
+.tips-container ul {
+    margin-left: 15px;
+}
+
+.tips-container li {
+    margin: 5px 0;
+    color: #ccc;
+}
+
+#strength-text {
+    text-align: center;
+    margin: 15px 0;
+    font-weight: bold;
+    font-size: 16px;
+    color: #0ff;
+    text-shadow: 0 0 5px rgba(0, 255, 255, 0.3);
+}
+
+/* Strength Colors */
+.very-weak {
+    background-color: #ff4d4d;
+    box-shadow: 0 0 10px rgba(255, 77, 77, 0.5);
+    width: 20%;
+}
+
+.weak {
+    background-color: #ffa64d;
+    box-shadow: 0 0 10px rgba(255, 166, 77, 0.5);
+    width: 40%;
+}
+
+.medium {
+    background-color: #ffff4d;
+    box-shadow: 0 0 10px rgba(255, 255, 77, 0.5);
+    width: 60%;
+}
+
+.strong {
+    background-color: #4da6ff;
+    box-shadow: 0 0 10px rgba(77, 166, 255, 0.5);
+    width: 80%;
+}
+
+.very-strong {
+    background-color: #4dff4d;
+    box-shadow: 0 0 10px rgba(77, 255, 77, 0.5);
+    width: 100%;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+    }
+    
+    h1 {
+        font-size: 20px;
+    }
+    
+    .requirements-container {
+        grid-template-columns: 1fr;
+    }
+} 

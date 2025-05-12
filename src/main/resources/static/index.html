@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Strength Analyzer</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1><i class="fas fa-shield-alt"></i> Password Strength Analyzer</h1>
+        
+        <div class="password-container">
+            <input type="password" id="password" placeholder="Enter your password">
+            <button id="togglePassword"><i class="fas fa-eye"></i></button>
+        </div>
+        
+        <div class="strength-meter">
+            <div class="bar"></div>
+        </div>
+        
+        <div id="strength-text">Password Strength: Not entered</div>
+        
+        <div class="requirements-container">
+            <div class="requirements">
+                <h3><i class="fas fa-list"></i> Basic Requirements</h3>
+                <p id="length"><i class="fas fa-times-circle"></i> At least 12 characters</p>
+                <p id="uppercase"><i class="fas fa-times-circle"></i> At least one uppercase letter</p>
+                <p id="lowercase"><i class="fas fa-times-circle"></i> At least one lowercase letter</p>
+                <p id="number"><i class="fas fa-times-circle"></i> At least one number</p>
+                <p id="special"><i class="fas fa-times-circle"></i> At least one special character</p>
+            </div>
+            
+            <div class="requirements">
+                <h3><i class="fas fa-shield-alt"></i> Advanced Security</h3>
+                <p id="consecutive"><i class="fas fa-times-circle"></i> No three consecutive same characters</p>
+                <p id="sequential"><i class="fas fa-times-circle"></i> No sequential characters (abc, 123)</p>
+                <p id="commonWords"><i class="fas fa-times-circle"></i> No common words or patterns</p>
+                <p id="goodLength"><i class="fas fa-times-circle"></i> Extra strong length (14+ characters)</p>
+                <p id="multipleSpecial"><i class="fas fa-times-circle"></i> Multiple special chars and numbers</p>
+            </div>
+        </div>
+        
+        <div class="tips-container">
+            <h3><i class="fas fa-lightbulb"></i> Tips for a Strong Password</h3>
+            <ul>
+                <li>Use a mix of characters (letters, numbers, symbols)</li>
+                <li>Make it long (14+ characters)</li>
+                <li>Avoid common words and patterns</li>
+                <li>Use multiple special characters</li>
+                <li>Don't use sequential characters</li>
+            </ul>
+        </div>
+    </div>
+    
+    <script src="js/script.js"></script>
+</body>
+</html> 

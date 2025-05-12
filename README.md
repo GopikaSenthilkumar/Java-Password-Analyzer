@@ -2,6 +2,16 @@
 
 A modern, dark-themed web application that checks password strength in real-time using JavaScript with a sleek, responsive UI.
 
+## Current State and Issues
+
+This project is primarily a client-side password analyzer with:
+- A fully functional frontend implementation (HTML/CSS/JavaScript)
+- Spring Boot configuration files (partial configuration)
+
+**Known Issues:**
+- The Spring Boot backend has not been fully integrated due to Maven configuration issues
+- The POM.xml file has encoding issues that prevent proper Maven build
+
 ## Features
 
 * **Sleek Dark Theme** with cyan accents and glowing elements
@@ -13,9 +23,7 @@ A modern, dark-themed web application that checks password strength in real-time
 
 ## Running the Application
 
-There are several ways to run this application:
-
-### Option 1: Direct HTML (Simplest)
+### Option 1: Direct HTML (Recommended)
 
 Simply open the `src/main/resources/static/index.html` file in your web browser. All functionality is client-side.
 
@@ -31,19 +39,6 @@ cd path/to/password-analyzer/src/main/resources/static
 python -m http.server 4000  
 ```
 4. Open your browser and navigate to: `http://localhost:4000`
-
-### Option 3: Using Spring Boot
-
-1. Open Command Prompt
-2. Navigate to the project directory:  
-```  
-cd path/to/password-analyzer  
-```
-3. Run using Maven:  
-```  
-mvn spring-boot:run  
-```
-4. Navigate to: `http://localhost:4000`
 
 ## Password Analysis Criteria
 
@@ -66,10 +61,11 @@ mvn spring-boot:run
 * CSS3 with Flexbox/Grid
 * Vanilla JavaScript
 * Font Awesome icons
-* Spring Boot (backend)
+* Spring Boot configuration files (not currently active)
 
-## Prerequisites
+## Future Improvements
 
-* Web browser (Chrome, Firefox, Edge, etc.)
-* For server options: Python or Java 17+ (depending on which method you choose)
-* Maven (for Spring Boot option) 
+* Fix Maven and Spring Boot integration for backend functionality
+* Add password persistence and history features
+* Implement user accounts for saving preferred password rules
+* Add comprehensive password dictionary checking 

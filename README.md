@@ -1,6 +1,7 @@
 # Password Strength Analyzer
 
 A modern, dark-themed web application that checks password strength in real-time using JavaScript with a sleek, responsive UI.
+https://java-password-analyzer.vercel.app/src/main/resources/static/index.html
 
 ## Current State and Issues
 
